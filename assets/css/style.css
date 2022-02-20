@@ -124,6 +124,8 @@ header nav ul li a {
 
 /* "PROJECTS" STYLES */
 
+/* Project images will be B&W but return to full color on hover */
+
 .project {
     position: relative;
     margin: 10px;
@@ -137,6 +139,9 @@ header nav ul li a {
     object-fit: cover;
     object-position: center;
     border: 3px solid var(--text-secondary);
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
 }
 
 .project figcaption {
@@ -149,8 +154,12 @@ header nav ul li a {
     padding: 10px;
     bottom: 15%;
     left: 0;
-    width: 25%;
+    width: auto;
     text-align: center;
+}
+
+.project figcaption p {
+    font-size: 1vw;
 }
 
 .section-info .project:first-child {
@@ -158,10 +167,16 @@ header nav ul li a {
     height: 400px;
 }
 
+.project img:hover {
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
 /* "CONTACT" STYLES */
 .contact-list {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
     text-decoration: none;
@@ -197,3 +212,114 @@ footer p {
 footer p a {
     color: var(--text-secondary);
 }
+
+/* MEDIA QUERIES */
+
+/* SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+    }
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
+    }
+  
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    header nav ul li a {
+      font-size: 20px;
+    }
+  
+    footer h2, footer div {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .hero-cta, .hero-form {
+      width: 100%;
+    }
+  
+    .hero-cta {
+      text-align: center;
+    }
+  
+    .section-title {
+      width: 80%;
+    }
+  
+    .trainer {
+      flex: 0 70%;
+    }
+  
+    .contact-info iframe {
+      flex: 1 100%;
+    }
+  }
+
+  /* TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    section {
+      padding: 30px 15px;
+    }
+  
+    .step h3 {
+      flex: 1 100%;
+      text-align: center;
+    }
+  
+    .step-info {
+      flex: 2 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .step-img {
+      flex: 0 32%;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .step-text {
+      flex: 100%;
+    }
+  }
+  
+  /* MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .hero-form button {
+      width: 100%;
+    }
+  
+    .section-title {
+      width: 95%;
+    }
+  
+    .intro p {
+      width: 100%;
+    }
+  
+    .trainer {
+      flex: 0 100%;
+    }
+  
+    .contact-info {
+      text-align: center;
+    }
+  
+    .contact-info > * {
+      flex: 0 100%;
+    }
+  
+    .contact-form {
+      order: 3;
+    }
+  }
