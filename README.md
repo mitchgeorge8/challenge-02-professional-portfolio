@@ -61,5 +61,6 @@ This project is a part of The Ohio State University's Coding Boot Camp.
 
 ## Acknowledgments
 
+* [Leah Shaffer](https://www.leahgraceshaffer.com/)
 * [DomPizzie](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
